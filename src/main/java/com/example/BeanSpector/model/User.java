@@ -11,17 +11,17 @@ import jakarta.persistence.Lob;
 @Entity
 @Table(name="users")
 @Data
-public class User{
+
+public class User {
     @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    private String name;
-    private String email;
+    private String name; // Tipe data String valid untuk kolom
+    private String email; // Tipe data String valid untuk kolom
 
-    @Lob//Large object for storing images in db.
-    private byte [] image;//Store image as byte array
+    @Lob // Large object for storing images in db.
+    private byte[] image; // Store image as byte array
 
-    private String analysisResult;
-
+    private String analysisResult; // Tipe data String valid untuk kolom
 }
