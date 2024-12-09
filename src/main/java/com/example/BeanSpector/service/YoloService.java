@@ -11,7 +11,7 @@ import java.util.List;
 @Service
 public class YoloService {
     private final Net net; // Menjadikan net sebagai final
-    private final double confidenceThreshold = 0.7; // Ambang batas kepercayaan default, dijadikan final
+    final double confidenceThreshold = 0.7; // Ambang batas kepercayaan default
 
     public YoloService() {
         // Memuat library OpenCV

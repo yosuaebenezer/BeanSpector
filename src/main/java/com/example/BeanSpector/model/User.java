@@ -9,9 +9,8 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Lob;
 
 @Entity
-@Table(name="users")
+@Table(name = "users")
 @Data
-
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
