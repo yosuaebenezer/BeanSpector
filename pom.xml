@@ -2,6 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
 		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
@@ -55,10 +56,11 @@
 			<scope>runtime</scope>
 		</dependency>
 
+		<!-- Hibernate Dependency -->
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
-			<version>5.6.9.Final</version>
+			<version>5.6.12.Final</version>
 		</dependency>
 
 		<!-- Testing Dependency -->
@@ -72,22 +74,26 @@
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<version>1.18.34</version><!-- Gunakan versi terbaru -->
+			<version>1.18.34</version>
 			<scope>provided</scope>
 		</dependency>
 
+		<!-- OpenCV Dependencies -->
 		<dependency>
 			<groupId>org.openpnp</groupId>
 			<artifactId>opencv</artifactId>
-			<version>4.3.0-1</version> <!-- Ganti dengan versi terbaru yang tersedia -->
+			<version>4.5.5-1</version>
 		</dependency>
-
 		<dependency>
 			<groupId>org.bytedeco</groupId>
 			<artifactId>opencv-platform</artifactId>
-			<version>4.5.5-1.5.7</version> <!-- Update to a newer version -->
+			<version>4.5.5-1.5.7</version>
 		</dependency>
 
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-json</artifactId>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -100,17 +106,20 @@
 		</plugins>
 	</build>
 
-	<!-- Repositories -->
 	<repositories>
 		<!-- OpenCV Repository -->
 		<repository>
 			<id>opencv</id>
 			<url>https://raw.github.com/opencv/opencv/master/</url>
 		</repository>
-
+		<!-- Bytedeco Repository -->
 		<repository>
 			<id>bytedeco</id>
 			<url>https://raw.github.com/bytedeco/javacpp-presets/master/</url>
+		</repository>
+		<repository>
+			<id>custom-repo</id>
+			<url>https://repository.example.com/maven2</url>
 		</repository>
 	</repositories>
 
