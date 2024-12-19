@@ -1,29 +1,46 @@
 /* index.css */
-*{
-    background-image: url("kopi.png");
-}
-
-
-#fotokopi{
-    width: 600px;
-    height: 350px;
-}
 
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url("kopi.png");
     /*background-color: #f5f0e6; /* Krem kopi */
     color: #4e342e; /* Cokelat tua */
 }
 
+#fotokopi {
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    width: 640px;
+    height: 426px;
+}
+
+#fotokopi:hover {
+    img.circle-image:hover {
+        box-shadow: 0 0 20px 10px rgba(255, 215, 0, 0.8); /* Cahaya keemasan */
+    }
+}
+
+button:hover {
+    box-shadow: 0 0 20px 10px rgba(255, 215, 0, 0.8); /* Cahaya keemasan */
+
+}
 header {
     background-color: #6d4c41; /* Cokelat kopi */
     color: #fff;
-    padding: 20px;
+    padding: 1px;
     text-align: center;
-    font-size: 28px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #6d4c41;
+    color: #fff;
+    padding: 1px;
+    text-align: center;
+    font-size: 8px;
     font-weight: bold;
 }
 

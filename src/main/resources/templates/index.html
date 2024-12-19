@@ -2,27 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/index.css}">
+
+
     <title>Bean Spector</title>
-    <link rel="stylesheet" href="/static/styles.css">
+
 </head>
 <body>
 <header>
-    <h1>Bean Spector</h1>
-    <p>Analyze Coffee Bean Quality</p>
+    <h1>Bean Spector - Analyze Coffee Bean Quality</h1>
 </header>
 <main>
     <form action="/analyze" method="post" enctype="multipart/form-data">
-        <label>Name:</label>
-        <input type="text" name="name" required>
-        <label>Email:</label>
-        <input type="email" name="email" required>
+        <h2>Hi Inspector! Let's Go to check your coffe-bean!</h2>
+        <img th:src="@{/bijikopi.jpeg}" id="fotokopi">
+        <h3>let's analyze the quality!!!</h3>
+        <label>Name    :</label>
+        <input type="text" name="name" required> <br> <br>
+        <label>Email   :</label>
+        <input type="email" name="email" required> <br>
         <label>Upload Image:</label>
         <input type="file" name="image" accept="image/*" required>
         <button type="submit">Analyze</button>
+        <br> <br> <br>
     </form>
     <div>
         <p th:if="${error}" th:text="${error}"></p>
     </div>
+
+<footer>
+    <h1> TIA ACADEMY PROJECT AKHIR </h1>
+</footer>
 </main>
 </body>
 </html>

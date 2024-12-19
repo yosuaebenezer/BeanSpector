@@ -8,12 +8,18 @@ body {
     color: #3e2723; /* Cokelat tua */
 }
 
+h1 {
+    font-size: 32px;
+    color: #5d4037; /* Cokelat tengah */
+    margin-bottom: 20px;
+}
+
 header {
     background-color: #4e342e; /* Cokelat tua */
     color: #fff;
     padding: 20px;
     text-align: center;
-    font-size: 26px;
+    font-size: 36px;
     font-weight: bold;
     letter-spacing: 1px;
 }
@@ -31,12 +37,6 @@ main {
     border-radius: 10px;
     box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
     padding: 25px;
-}
-
-h1 {
-    font-size: 32px;
-    color: #5d4037; /* Cokelat tengah */
-    margin-bottom: 20px;
 }
 
 .result-info {

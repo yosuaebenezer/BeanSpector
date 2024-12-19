@@ -3,15 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <title>Analysis Result</title>
-    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="stylesheet" th:href="@{/result.css}">
 </head>
 <body>
 <header>
-    <h1>Analysis Result</h1>
+    <h2>Analysis Result</h2>
 </header>
 <main>
-    <p>Your analysis result: <strong th:text="${result}"></strong></p>
-    <a href="/">Back to Home</a>
+    <div class="result-container">
+        <h1>Bean Analysis</h1>
+        <p class="result-info">
+            Your analysis result: <strong th:text="${result}">[Result goes here]</strong>
+        </p>
+        <div class="chart">
+            <!-- Placeholder for any additional content like charts -->
+            <p>Visual representation will appear here (optional).</p>
+        </div>
+        <a href="/">
+            <button type="button">Back to Home</button>
+        </a>
+    </div>
 </main>
+<footer>
+    <p>&copy; 2024 Bean Spector | TIA Academy</p>
+</footer>
 </body>
 </html>
