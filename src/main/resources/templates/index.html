@@ -2,93 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bean Spector - Analyze Coffee Beans Quality</title>
+    <title>Bean Spector</title>
     <link rel="stylesheet" href="/static/styles.css">
 </head>
 <body>
-<div class="container">
-    <h1>Analyze Coffee Beans Quality</h1>
-
-    <!-- Form Upload Gambar dan Informasi Pengguna -->
-    <form id="uploadForm" action="/analyzeWithFlask" method="post" enctype="multipart/form-data">
-        <label for="name">Your Name:</label>
-        <input type="text" id="name" name="name" placeholder="Enter your name" required>
-
-        <label for="email">Your Email:</label>
-        <input type="email" id="email" name="email" placeholder="Enter your email" required>
-
-        <label for="image">Upload Image:</label>
-        <input type="file" id="image" name="image" accept="image/*" required>
-
-        <input type="file" name="image" required>
-        <button type="submit">Analyze with Flask</button>
+<header>
+    <h1>Bean Spector</h1>
+    <p>Analyze Coffee Bean Quality</p>
+</header>
+<main>
+    <form action="/analyze" method="post" enctype="multipart/form-data">
+        <label>Name:</label>
+        <input type="text" name="name" required>
+        <label>Email:</label>
+        <input type="email" name="email" required>
+        <label>Upload Image:</label>
+        <input type="file" name="image" accept="image/*" required>
+        <button type="submit">Analyze</button>
     </form>
-
-    <!-- Hasil Deteksi -->
-    <div id="result" class="result-container">
-        <!-- Hasil deteksi akan muncul di sini -->
+    <div>
+        <p th:if="${error}" th:text="${error}"></p>
     </div>
-</div>
-
-<script>
-    // Menangani form submit untuk upload gambar
-    document.getElementById('uploadForm').addEventListener('submit', function(event) {
-        event.preventDefault(); // Mencegah form default submit
-
-        let formData = new FormData();
-        let fileInput = document.getElementById('image');
-
-        if (fileInput.files.length === 0) {
-            alert('Please select an image to upload.');
-            return;
-        }
-
-        // Menambahkan data ke FormData
-        formData.append('image', fileInput.files[0]);
-        formData.append('name', document.getElementById('name').value);
-        formData.append('email', document.getElementById('email').value);
-
-        // Mengirim request ke API YOLO untuk analisis gambar
-        fetch('http://localhost:5000/api/yolo', {
-            method: 'POST',
-            body: formData
-        })
-            .then(response => response.json())
-            .then(data => {
-                if (data.detections) {
-                    displayResults(data.detections);
-                } else {
-                    document.getElementById('result').innerHTML = '<p>Error: ' + data.error + '</p>';
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                document.getElementById('result').innerHTML = '<p>Error while processing the image.</p>';
-            });
-    });
-
-    // Menampilkan hasil deteksi YOLO
-    function displayResults(detections) {
-        let resultHTML = '<h2>Detection Results:</h2>';
-        let resultList = '<ul>';
-
-        // Menampilkan informasi deteksi objek
-        detections.forEach(detection => {
-            resultList += `
-                <li>
-                    <strong>Object:</strong> ${detection.name} <br>
-                    <strong>Confidence:</strong> ${detection.confidence.toFixed(2)} <br>
-                    <strong>Bounding Box:</strong> [${detection.xmin}, ${detection.ymin}] to [${detection.xmax}, ${detection.ymax}]
-                </li>
-            `;
-        });
-        resultList += '</ul>';
-
-        resultHTML += resultList;
-        document.getElementById('result').innerHTML = resultHTML;
-    }
-</script>
-
+</main>
 </body>
 </html>

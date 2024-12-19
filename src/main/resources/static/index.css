@@ -1,0 +1,73 @@
+/* index.css */
+*{
+    background-image: url("kopi.png");
+}
+
+
+#fotokopi{
+    width: 600px;
+    height: 350px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("kopi.png");
+    /*background-color: #f5f0e6; /* Krem kopi */
+    color: #4e342e; /* Cokelat tua */
+}
+
+header {
+    background-color: #6d4c41; /* Cokelat kopi */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+section {
+    margin: 20px auto;
+    max-width: 800px;
+    background: #fff;
+    border: 1px solid #d7ccc8; /* Warna abu muda */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+h2 {
+    color: #795548; /* Cokelat muda */
+}
+
+button {
+    background-color: #a1887f; /* Cokelat beige */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #8d6e63; /* Lebih gelap saat hover */
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #6d4c41; /* Cokelat kopi */
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

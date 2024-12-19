@@ -6,10 +6,12 @@
     <link rel="stylesheet" href="/static/styles.css">
 </head>
 <body>
-<div class="container">
+<header>
     <h1>Analysis Result</h1>
-    <p>The quality of your coffee bean is: {{ result }}</p>
+</header>
+<main>
+    <p>Your analysis result: <strong th:text="${result}"></strong></p>
     <a href="/">Back to Home</a>
-</div>
+</main>
 </body>
 </html>

@@ -1,0 +1,79 @@
+/* result.css */
+
+body {
+    font-family: "Georgia", serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ede0d4; /* Warna krem kopi yang lebih pekat */
+    color: #3e2723; /* Cokelat tua */
+}
+
+header {
+    background-color: #4e342e; /* Cokelat tua */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+.result-container {
+    margin: 20px auto;
+    max-width: 900px;
+    background: #fdfcfb; /* Putih krem */
+    border: 2px solid #8d6e63;
+    border-radius: 10px;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
+    padding: 25px;
+}
+
+h1 {
+    font-size: 32px;
+    color: #5d4037; /* Cokelat tengah */
+    margin-bottom: 20px;
+}
+
+.result-info {
+    font-size: 18px;
+    color: #4e342e;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.chart {
+    margin: 30px 0;
+    background-color: #efebe9; /* Warna abu terang */
+    padding: 15px;
+    border-radius: 8px;
+}
+
+button {
+    background-color: #6d4c41;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #5d4037;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #4e342e;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
